@@ -19,7 +19,7 @@ const matrices = new Float32Array(instanceCount * 16);
 const matrix = new pc.Mat4();
 let matrixIndex = 0;
 for (let i = 0; i < instanceCount; i++) {
-    matrix.setTRS(pos, pc.Vec3.ZERO, pc.Vec3.ONE);
+    matrix.setTRS(pos, pc.Quat.IDENTITY, pc.Vec3.ONE);
 
     // copy matrix elements into array of floats
     for (let m = 0; m < 16; m++)
